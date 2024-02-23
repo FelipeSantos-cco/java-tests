@@ -60,7 +60,7 @@ public class LoginController {
 
     private Login retornaLogin(String email, String senha){
         for (Login login : logins) {
-            if(isLoginValido(email, senha)){
+            if(isLoginValido(email, senha) && login.getEmail().equals(email) && login.getSenha().equals(senha)){
                 return login;
             }
         }
